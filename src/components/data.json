@@ -1,0 +1,18 @@
+{
+    "tasks" : [
+        {
+            "title": "i want to watch plate",
+            "done" : false
+        },
+        {
+            "title": "i want to watch plate1",
+            "done" : false
+
+        },
+        {
+            "title": "i want to watch plate2",
+            "done" : true
+
+        }
+    ]
+}
