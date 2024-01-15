@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, completeTask, deleteTask } from "../redux/todoReducer";
-import UseFetch from "../redux/apiCall";
-import useFetch from "../redux/apiCall";
+
 
 const TaskContainer = () => {
     const dispatch = useDispatch();
@@ -18,13 +17,11 @@ const TaskContainer = () => {
     };
   
     const handleDelete = (taskId) => {
-      // Open the modal for confirmation
       setTaskIdToDelete(taskId);
       setModal(true);
     };
   
     const confirmDelete = () => {
-      // Dispatch the delete action and close the modal
       if (taskIdToDelete !== null) {
         dispatch(deleteTask(taskIdToDelete));
         setModal(false);
