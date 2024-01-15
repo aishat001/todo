@@ -1,12 +1,15 @@
 import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, completeTask, deleteTask } from "../redux/todoReducer";
+import useFetch from "../redux/apiCall";
 
 
 const TaskContainer = () => {
     const dispatch = useDispatch();
     const tasks = useSelector((state) => state.todos);
-  
+    const {initData} = useFetch()
+
+    
     const [task, setTask] = useState("");
     const [modal, setModal] = useState(false);
     const [taskIdToDelete, setTaskIdToDelete] = useState(null);
